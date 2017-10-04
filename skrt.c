@@ -14,6 +14,7 @@ int main(){
   printf("Testing strcpy(s2,s1):\n[Standard]:|%s|\n[Mine]:|%s|\n", strcpy(s2,s1),skrtcpy(s2,s1));
   char s5[] = "steroid";
   printf("Testing strcat(s2,s1):\n[Standard]:|%s|\n[Mine]:|%s|\n", strcat(s1,s5), strcat(s4,s5));
+  printf("Testing strcat(s1,s2):\n[Standard]:|%d|\n[Mine]:|%d|\n", strcmp(s1,s2), skrtcamp(s1,s2));
   return 7;
 }
 int skrtlen(char*skr){
@@ -41,4 +42,16 @@ char* skrtmeow(char*dest,char*source){
   }
   dest[len+i]=0;
   return dest;
+}
+int skrtcamp(char *s1, char *s2){
+  int i = 0;
+  while (s1[i] || s2[i]){
+    if (s1[i]==s2[i]){
+      i++;
+    }
+    else{
+      return s1[i]-s2[i];
+    }
+  }
+  return s1[i]-s2[i];
 }
