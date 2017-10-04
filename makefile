@@ -3,5 +3,5 @@ compile: skrt.c
 run: compile
 	./a.out
 clean:
-	rm * .o	
-	rm * ~	
+	rm *.o	
+	rm *~	

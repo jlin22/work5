@@ -42,6 +42,3 @@ char* skrtmeow(char*dest,char*source){
   dest[len+i]=0;
   return dest;
 }
-int skrtcamp(){
-  return 0;
-}
