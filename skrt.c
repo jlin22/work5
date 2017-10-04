@@ -7,11 +7,13 @@ int skrtcamp(char*s1, char*s2);
 int skrtcar(char*s, char c);
 int main(){
   char s1[] = "ragers";
-  char s2[] = "steroidsssssssssssssssss";
+  char s2[] = "steroid";
   char s3[] = "balls";
+  char s4[] = "ragers";
   printf("Testing strlen(s2):\n[Standard]:%lu\n[Mine]:%d\n", strlen(s2), skrtlen(s2));  
   printf("Testing strcpy(s2,s1):\n[Standard]:|%s|\n[Mine]:|%s|\n", strcpy(s2,s1),skrtcpy(s2,s1));
-  pritnf("Testing strcat(s2,s1):\n[Standard]:|
+  char s5[] = "steroid";
+  printf("Testing strcat(s2,s1):\n[Standard]:|%s|\n[Mine]:|%s|\n", strcat(s1,s5), strcat(s4,s5));
   return 7;
 }
 int skrtlen(char*skr){
@@ -39,4 +41,7 @@ char* skrtmeow(char*dest,char*source){
   }
   dest[len+i]=0;
   return dest;
+}
+int skrtcamp(){
+  return 0;
 }
